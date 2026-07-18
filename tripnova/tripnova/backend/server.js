@@ -19,7 +19,7 @@ const weatherRoutes = require('./routes/weatherRoutes');
 const app = express();
 
 // --- Serve rebuilt landing page as static files ---
-// Access the bot at http://localhost:5000
+// Access the bot at http://localhost:10000
 app.use(express.static(path.join(__dirname, '../../../tripnova-rebuilt')));
 
 // --- Core middleware ---
@@ -29,6 +29,8 @@ const ALLOWED_ORIGINS = [
   'http://localhost:5500',   // VS Code Live Server (landing-preview.html)
   'http://127.0.0.1:5500',  // VS Code Live Server (alternate)
   'http://localhost:5501',   // VS Code Live Server (if 5500 is taken)
+  'http://localhost:10000',  // Hosted port (main)
+  'http://127.0.0.1:10000', // Hosted port (alternate)
   'null',                    // Local file system double-click (file:/// origin is null)
 ];
 app.use(cors({
