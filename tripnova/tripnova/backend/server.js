@@ -31,6 +31,7 @@ const ALLOWED_ORIGINS = [
   'http://localhost:5501',   // VS Code Live Server (if 5500 is taken)
   'http://localhost:10000',  // Hosted port (main)
   'http://127.0.0.1:10000', // Hosted port (alternate)
+  'https://kandenakurchika.github.io', // Live GitHub Pages URL
   'null',                    // Local file system double-click (file:/// origin is null)
 ];
 app.use(cors({
